@@ -1,0 +1,30 @@
+# Change log
+
+## [0.1.0] - 2015-04-23
+
+### Added
+
+- check
+
+Use it together with `done` to simplify error assertion on asynchronous tests.
+
+```
+it('tests something asynchronous', function(done) {
+  check(done, function() {
+    // asynchronous stuff...
+  })
+})
+```
+
+- wcheck
+
+Use it together with `done` to simplify error assertion on asynchronous tests.
+It's the same as check but it returns a wrapped function instead. Useful for callbacks.
+
+```
+it('tests something asynchronous', function(done) {
+  someCallback(wcheck(done, function(arg1) {
+    // asynchronous stuff...
+  }))
+})
+```
