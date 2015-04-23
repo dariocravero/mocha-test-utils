@@ -1,5 +1,11 @@
 # Change log
 
+## [0.1.1] - 2015-04-23
+
+### Changed
+
+- Source files to `.es` so that it can compile to `.js` before publishing to npm.
+
 ## [0.1.0] - 2015-04-23
 
 ### Added
