@@ -7,11 +7,11 @@ A bunch of helpers to aid mocha testing.
 Use it together with `done` to simplify error assertion on asynchronous tests.
 
 ```
-it('tests something asynchronous', function(done) {
+it('tests something asynchronous', (done) => {
   check(done, function() {
     // asynchronous stuff...
-  })
-})
+  });
+});
 ```
 
 ## wcheck
@@ -20,11 +20,11 @@ Use it together with `done` to simplify error assertion on asynchronous tests.
 It's the same as check but it returns a wrapped function instead. Useful for callbacks.
 
 ```
-it('tests something asynchronous', function(done) {
-  someCallback(wcheck(done, function(arg1) {
+it('tests something asynchronous', (done) => {
+  someCallback(wcheck(done, (arg1) => {
     // asynchronous stuff...
-  }))
-})
+  }));
+});
 ```
 
 

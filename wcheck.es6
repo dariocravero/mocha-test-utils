@@ -4,10 +4,10 @@
 export default function wcheck(done, fn) {
   return function(...args) {
     try {
-      fn.apply(this, args)
-      done()
+      fn.apply(this, args);
+      done();
     } catch(exception) {
-      done(exception)
+      done(exception);
     }
   }
 }

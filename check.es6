@@ -4,9 +4,9 @@
 
 export default function check(done, fn) {
   try {
-    fn()
-    done()
+    fn();
+    done();
   } catch(exception) {
-    done(exception)
+    done(exception);
   }
 }
