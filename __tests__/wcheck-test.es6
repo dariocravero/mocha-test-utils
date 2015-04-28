@@ -2,7 +2,7 @@ import assert from 'assert';
 import wcheck from '../wcheck';
 import { spy, stub } from 'sinon';
 
-describe('wcheck', () => {
+describe('#wcheck', () => {
   it('should return a function', () => assert(typeof wcheck() === 'function'));
 
   it(`shouldn't call done nor the function when first invoked`, () => {

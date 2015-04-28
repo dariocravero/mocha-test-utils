@@ -2,7 +2,7 @@ import assert from 'assert';
 import check from '../check';
 import { spy, stub } from 'sinon';
 
-describe('check', () => {
+describe('#check', () => {
   it('should call done when the function finished', () => {
     let done = spy();
     let fn = spy();
