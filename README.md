@@ -2,6 +2,8 @@
 
 A bunch of helpers to aid mocha testing.
 
+[![Build Status](https://travis-ci.org/dariocravero/mocha-test-utils.svg?branch=master)](https://travis-ci.org/dariocravero/mocha-test-utils)
+
 ## check
 
 Use it together with `done` to simplify error assertion on asynchronous tests.
