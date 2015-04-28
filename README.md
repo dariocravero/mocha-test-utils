@@ -16,6 +16,37 @@ it('tests something asynchronous', (done) => {
 });
 ```
 
+## mockCreator
+
+Use it to create a module mocker. Handy used with Marty to mock all aspects of a module but one or
+two things.
+
+```js
+// __mocks__/index.js
+import ActionCreators from './action-creators';
+import Constants from './constants';
+import Container from './container';
+import Component from './component';
+import Store from './store';
+
+export default mockCreator({
+  ActionCreators,
+  Constants,
+  Container,
+  Component,
+  Store
+});
+
+// __tests__/store-test.js
+import mockCreator from '../__mocks__';
+
+const mock = mockCreator('actionCreators', 'component');
+
+// Do stuff with:
+mock.actionCreators;
+mock.component;
+```
+
 ## propertyDescriptor
 
 Use it to get the propertyDescriptor for specific property on an object.

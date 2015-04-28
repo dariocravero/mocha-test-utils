@@ -1,6 +1,6 @@
 {
   "name": "mocha-test-utils",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "mocha.js test utils",
   "main": "index.js",
   "scripts": {
