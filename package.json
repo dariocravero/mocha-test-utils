@@ -1,13 +1,12 @@
 {
   "name": "mocha-test-utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "mocha.js test utils",
   "main": "index.js",
   "scripts": {
     "test": ".bin/test",
-    "compile": "babel --only `find . -name '*.es6' -type f -not -path './node_modules/*'` -d . .",
-    "prepublish": "npm run compile",
-    "postpublish": "find . -name '*.js' -type f -not -path './node_modules/*' -exec rm {} \\;"
+    "prepublish": ".bin/compile",
+    "postpublish": ".bin/clean"
   },
   "repository": {
     "type": "git",

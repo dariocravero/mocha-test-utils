@@ -1,4 +1,10 @@
 export default function propertyDescriptor(object, property) {
-  const proto = object.prototype || Object.getPrototypeOf(object);
-  return Object.getOwnPropertyDescriptor(proto, property);
+  let pd = Object.getOwnPropertyDescriptor(object, property);
+
+  if (typeof pd === 'undefined') {
+    const proto = object.prototype || Object.getPrototypeOf(object);
+    pd = Object.getOwnPropertyDescriptor(proto, property);
+  }
+
+  return pd;
 }

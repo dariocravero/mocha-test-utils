@@ -2,7 +2,7 @@ import assert from 'assert';
 import propertyDescriptor from '../property-descriptor';
 
 describe('#propertyDescriptor', () => {
-  describe('function', () => {
+  describe('function (no ES6 sugar)', () => {
     function Foo() {};
     Object.defineProperty(Foo.prototype, 'bar', {
       get: function() {},
@@ -43,9 +43,9 @@ describe('#propertyDescriptor', () => {
     });
   });
 
-  it('works with properties defined in an object', () => {
+  it('works with properties defined in an object and not on its prototype', () => {
     let foo = {};
-    Object.defineProperty(Object.getPrototypeOf(foo), 'bar', {
+    Object.defineProperty(foo, 'bar', {
       get: function() {},
       set: function(baz) {}
     });
